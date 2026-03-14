@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviewer ni Daren</title>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="exam-container" id="app">
+        <h1>📘 Reviewer <small></small></h1>
+
+        <!-- main exam view (no explanations) -->
+        <div id="exam-view">
+            <div class="header-bar">
+                <div class="pagination-controls">
+                    <button id="prevPageBtn" disabled>◀ Prev</button>
+                    <span id="pageIndicator">Page 1 of 12</span>
+                    <button id="nextPageBtn">Next ▶</button>
+                </div>
+                <div class="nav-questions">
+                    <select id="questionJumpSelect"></select>
+                </div>
+            </div>
+
+            <div id="questionsContainer"></div>
+            <button class="submit-btn" id="submitExamBtn">✔ SUBMIT EXAM</button>
+        </div>
+
+        <!-- summary view (hidden initially) shows explanations -->
+        <div id="summary-view" class="hidden">
+            <div class="summary-header">
+                <span class="summary-score" id="finalScore">0 / 223</span>
+                <button class="restart-btn" id="restartBtn">⟲ Restart exam (shuffle)</button>
+            </div>
+            <div id="summaryList" class="summary-list"></div>
+        </div>
+        <footer>⚡ Correct answers and explanations are available only after submission</footer>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
